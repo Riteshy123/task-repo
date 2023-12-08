@@ -2,7 +2,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_BASE_API_URL,
+  baseURL:`http://localhost:3001`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -12,7 +12,7 @@ const refreshToken = async () => {
   const refreshToken = JSON.parse(localStorage.getItem("mern-task-management/user")).refreshToken;
   try {
     const { data } = await axios.post(
-      `${process.env.REACT_APP_BASE_API_URL}/api/auth/refresh_token`,
+      `http://localhost:3001/api/auth/refresh_token`,
       {
         token: refreshToken,
       }

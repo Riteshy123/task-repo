@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: process.env.NODE_ENV === "production" ? ".env" : ".env.development",
+  path:  ".env"
 });
 
 const express = require("express");
@@ -7,11 +7,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const app = express();
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL,
-  })
-);
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

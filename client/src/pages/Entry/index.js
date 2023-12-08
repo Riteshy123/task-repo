@@ -17,8 +17,8 @@ const Entry = () => {
 
   const loginUser = async () => {
     try {
-      const { data } = await axios.post(
-        `${process.env.REACT_APP_BASE_API_URL}/api/auth/login`,
+      const {data } = await axios.post(
+        `http://localhost:3001/api/auth/login`,
         {
           username,
           password,
@@ -35,7 +35,7 @@ const Entry = () => {
   const registerUser = async () => {
     try {
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BASE_API_URL}/api/auth/register`,
+        `http://localhost:3001/api/auth/register`,
         {
           username,
           password,

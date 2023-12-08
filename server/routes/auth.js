@@ -32,7 +32,9 @@ router.post("/register", async (req, res) => {
 
 // login user
 router.post("/login", async (req, res) => {
+  console.log(process.env.REFRESH_TOKEN_SECRET);
   try {
+    console.log(req.body.username)
     const userClient = {
       username: req.body.username,
       password: req.body.password,
