@@ -11,7 +11,7 @@
       width: 100%;
     }
   }
-  
+  //
   @media (max-width: 640px) {
     .new-task-page .btn-primary {
       width: 100%;
